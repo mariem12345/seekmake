@@ -11,6 +11,6 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Admin::updateOrCreate(['username'=>'admin'],['username'=>'admin','password'=>'admin','status='>'1']);
+        \App\Admin::updateOrCreate(['username'=>'admin'],['username'=>'admin','password'=>'admin','status'=>'1']);
     }
 }
