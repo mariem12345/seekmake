@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class AdminSeeder extends Seeder
 {
@@ -11,6 +12,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Admin::updateOrCreate(['username'=>'admin'],['username'=>'admin','password'=>'admin','status'=>'1']);
+        \App\Admin::updateOrCreate(['username'=>'admin', 'password' => md5('admin1234567')]);
+
     }
 }
