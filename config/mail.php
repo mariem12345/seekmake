@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'mariemmahfoudh.seekmake@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'E-com Website'),
+        'name' => env('MAIL_FROM_NAME', 'seekmake'),
     ],
 
     /*

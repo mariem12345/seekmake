@@ -172,7 +172,6 @@
                   <td>{{ $pro->product_color }}</td>
                   <td>{{ $pro->product_price }}</td>
                   <td>{{ $pro->product_qty }}</td>
-                   <td>{{ $pro->personnalisation }}</td>
 
               </tr>
               @endforeach

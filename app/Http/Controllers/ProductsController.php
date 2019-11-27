@@ -379,6 +379,9 @@ class ProductsController extends Controller
 
             return view('products.listing')->with(compact('categories','productsAll','search_product')); 
 
+        }else{
+                return redirect('/home.blade');
+
         }
     }
 

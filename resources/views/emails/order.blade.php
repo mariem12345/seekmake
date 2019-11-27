@@ -15,8 +15,6 @@
 				<tr bgcolor="#cccccc">
 					<td>Nom produit</td>
 					<td>Code produit</td>
-					<td>Size</td>
-					<td>Couleur</td>
 					<td>Quantité</td>
 					<td>Sous-total</td>
 				</tr>
@@ -24,8 +22,6 @@
 					<tr>
 						<td>{{ $product['product_name'] }}</td>
 						<td>{{ $product['product_code'] }}</td>
-						<td>{{ $product['product_size'] }}</td>
-						<td>{{ $product['product_color'] }}</td>
 						<td>{{ $product['product_qty'] }}</td>
 						<td>TND {{ $product['product_price'] }}</td>
 					</tr>
@@ -33,7 +29,7 @@
 				<tr>
 					<td colspan="5" align="right">Montant de livraison</td><td>TND {{ $productDetails['shipping_charges'] }}</td>
 				</tr>
-			
+
 				<tr>
 					<td colspan="5" align="right">Total</td><td>TND {{ $productDetails['grand_total'] }}</td>
 				</tr>
@@ -59,7 +55,7 @@
 							<tr>
 								<td>{{ $userDetails['state'] }}</td>
 							</tr>
-							
+
 							<tr>
 								<td>{{ $userDetails['pincode'] }}</td>
 							</tr>
@@ -85,7 +81,7 @@
 							<tr>
 								<td>{{ $productDetails['state'] }}</td>
 							</tr>
-							
+
 							<tr>
 								<td>{{ $productDetails['pincode'] }}</td>
 							</tr>

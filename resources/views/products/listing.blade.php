@@ -65,15 +65,7 @@
 				@include('layouts.frontLayout.front_sidebar')
 			</div>
 			
-			<div class="col-sm-9 padding-right">
-				<div class="features_items"><!--features_items-->
-					<h2 class="title text-center">
-						@if(!empty($search_product))
-							{{ $search_product }} Item
-						@else
-							{{ $categoryDetails->name }} 
-						@endif
-					</h2>
+			
 					@foreach($productsAll as $pro)
 					<div class="col-sm-4">
 						<div class="product-image-wrapper">
