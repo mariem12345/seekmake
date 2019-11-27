@@ -15,7 +15,7 @@ $mainCategories =  Controller::mainCategories();
 							</ul>
 						</div>
 					</div>
-					
+
 
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
@@ -30,7 +30,7 @@ $mainCategories =  Controller::mainCategories();
 				</div>
 			</div>
 		</div><!--/header_top-->
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -40,24 +40,24 @@ $mainCategories =  Controller::mainCategories();
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
-								
+
 					<ul>
-								
-								
+
+
 								<a href="http://seekmake.com/" target="blank"><img src="{{ asset('images/frontend_images/home/logo1.png') }}" alt="" /></a>
 
 							</ul>
-							
-							
+
+
 							</div>
 						</div>
 					</div>
-			
+
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								
-								
+
+
 								<li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart"></i> Panier</a></li>
 								@if(empty(Auth::check()))
 									<li><a href="{{ url('/login-register') }}"><i class="fa fa-lock"></i> Se Connecter</a></li>
@@ -71,7 +71,7 @@ $mainCategories =  Controller::mainCategories();
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
@@ -93,21 +93,21 @@ $mainCategories =  Controller::mainCategories();
                                         	<li><a href="{{ asset('products/'.$cat->url) }}">{{ $cat->name }}</a></li>
 										@endforeach
                                     </ul>
-                                </li> 
-								
-								
+                                </li>
+
+
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<form action="{{ url('/search-products') }}" method="post">{{ csrf_field() }} 
+							<form action="{{ url('/search-products') }}" method="post">{{ csrf_field() }}
 								<input type="text" placeholder="Chercher Produit" name="product" />
 								<button type="submit" style="border:0px; height:33px; margin-left:-3px">Rechercher</button>
 							</form>
 						</div>
 					</div>
-				</div>
+				</div>p
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
