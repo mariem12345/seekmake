@@ -96,7 +96,7 @@
 								<p>Product Code: {{ $cart->product_code }}</p>
 							</td>
 							<td class="cart_price">
-								<p>TND {{ $cart->price }}</p>
+								<p> {{ $cart->price }} TND</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -104,7 +104,7 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">TND {{ $cart->price*$cart->quantity }}</p>
+								<p class="cart_total_price"> {{ $cart->price*$cart->quantity }} TND</p>
 							</td>
 						</tr>
 						<?php $total_amount = $total_amount + ($cart->price*$cart->quantity); ?>
@@ -115,18 +115,18 @@
 								<table class="table table-condensed total-result">
 									<tr>
 										<td>Sous-total</td>
-										<td>TND {{ $total_amount }}</td>
+										<td> {{ $total_amount }} TND</td>
 									</tr>
 									<tr class="shipping-cost">
 										<td>Montant de livraison(+)</td>
-										<td>TND 7</td>										
+										<td> 7 TND</td>										
 									</tr>
 									<tr class="shipping-cost">
 										
 									</tr>
 									<tr>
 										<td>Total</td>
-										<td><span>TND {{ $grand_total = $total_amount +7 }}</span></td>
+										<td><span> {{ $grand_total = $total_amount +7 }} TND</span></td>
 									</tr>
 								</table>
 							</td>

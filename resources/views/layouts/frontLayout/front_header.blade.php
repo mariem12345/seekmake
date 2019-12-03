@@ -16,7 +16,6 @@ $mainCategories =  Controller::mainCategories();
 						</div>
 					</div>
 
-
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
@@ -31,25 +30,20 @@ $mainCategories =  Controller::mainCategories();
 			</div>
 		</div><!--/header_top-->
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="http://seekmake.com/" target="blank"><img  class="banu"src="{{ asset('images/frontend_images/home/ban.gif') }}" alt="" weight="200"/></a>
+
+
+            </div></div></div>
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a href="{{ url('./')}}"><img src="{{ asset('images/frontend_images/home/logo.png') }}" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
 
-					<ul>
-
-
-								<a href="http://seekmake.com/" target="blank"><img src="{{ asset('images/frontend_images/home/logo1.png') }}" alt="" /></a>
-
-							</ul>
-
-
-							</div>
 						</div>
 					</div>
 
@@ -103,11 +97,11 @@ $mainCategories =  Controller::mainCategories();
 						<div class="search_box pull-right">
 							<form action="{{ url('/search-products') }}" method="post">{{ csrf_field() }}
 								<input type="text" placeholder="Chercher Produit" name="product" />
-								<button type="submit" style="border:0px; height:33px; margin-left:-3px">Rechercher</button>
+								<button type="submit" class="rech" style="border:0px; height:33px; margin-left:-3px">Rechercher</button>
 							</form>
 						</div>
 					</div>
-				</div>p
+				</div>
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->

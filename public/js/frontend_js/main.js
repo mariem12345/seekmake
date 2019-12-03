@@ -45,14 +45,14 @@ $(document).ready(function(){
 			data:{idsize:idsize},
 			success:function(resp){
 				var arr = resp.split('#');
-				$("#getPrice").html("TND"+arr[0]);
+				$("#getPrice").html(arr[0]+ "TND");
 				$("#price").val(arr[0]);
 				if(arr[1]==0){
 					$("#cartButton").hide();
-					$("#Availability").text("Out Of Stock");
+					$("#Availability").text("En rupture de stock");
 				}else{
 					$("#cartButton").show();
-					$("#Availability").text("In Stock");
+					$("#Availability").text("En stock");
 				}
 				
 				

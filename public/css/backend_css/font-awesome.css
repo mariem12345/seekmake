@@ -141,6 +141,7 @@ ul.icons li [class*=" icon-"] {
 .pull-left {
   float: left;
 }
+
 [class^="icon-"].pull-left,
 [class*=" icon-"].pull-left {
   margin-right: .35em;

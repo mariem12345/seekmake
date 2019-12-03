@@ -34,11 +34,11 @@
                 </tr>
                 <tr>
                   <td class="taskDesc">Order Total</td>
-                  <td class="taskStatus">TND {{ $orderDetails->grand_total }}</td>
+                  <td class="taskStatus"> {{ $orderDetails->grand_total }TND</td>
                 </tr>
                 <tr>
                   <td class="taskDesc">Shipping Charges</td>
-                  <td class="taskStatus">TND {{ $orderDetails->shipping_charges }}</td>
+                  <td class="taskStatus"> {{ $orderDetails->shipping_charges }TND</td>
                 </tr>
                 <tr>
                   <td class="taskDesc">Coupon Code</td>
@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                   <td class="taskDesc">Coupon Amount</td>
-                  <td class="taskStatus">TND {{ $orderDetails->coupon_amount }}</td>
+                  <td class="taskStatus"> {{ $orderDetails->coupon_amount }TND</td>
                 </tr>
                 <tr>
                   <td class="taskDesc">Payment Method</td>

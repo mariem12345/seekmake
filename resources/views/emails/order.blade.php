@@ -23,15 +23,15 @@
 						<td>{{ $product['product_name'] }}</td>
 						<td>{{ $product['product_code'] }}</td>
 						<td>{{ $product['product_qty'] }}</td>
-						<td>TND {{ $product['product_price'] }}</td>
+						<td> {{ $product['product_price'] }} TND</td>
 					</tr>
 				@endforeach
 				<tr>
-					<td colspan="5" align="right">Montant de livraison</td><td>TND {{ $productDetails['shipping_charges'] }}</td>
+					<td colspan="5" align="right">Montant de livraison</td><td> {{ $productDetails['shipping_charges'] }}7 TND</td>
 				</tr>
 
 				<tr>
-					<td colspan="5" align="right">Total</td><td>TND {{ $productDetails['grand_total'] }}</td>
+					<td colspan="5" align="right">Total</td><td> {{ $productDetails['grand_total'] }}TND</td>
 				</tr>
 			</table>
 		</td></tr>
@@ -94,10 +94,14 @@
 			</table>
 		</td></tr>
 		<tr><td>&nbsp;</td></tr>
-		<tr><td>Pour toute demande de renseignements, vous pouvez nous contacter à<a href="mailto:seekmake.co@gmail.com">seekmake.co@gmail.com</a></td></tr>
+		<tr><td>Pour toute demande de renseignements, vous pouvez nous contacter à <a href="mailto:seekmake.co@gmail.com">seekmake.co@gmail.com</a></td></tr>
 		<tr><td>&nbsp;</td></tr>
 		<tr><td>Merci, <br> SeekMake</td></tr>
 		<tr><td>&nbsp;</td></tr>
-	</table>
+        <tr><td>*Remarque: ce mail a été envoyé à partir d'une adresse qui ne peut accepter les e-mails entrants. Veuillez utiliser seekmake.co@gmail.com si vous devez nous contacter à nouveau.*
+            </td></tr>
+        <tr><td>&nbsp;</td></tr>
+
+    </table>
 </body>
 </html>
