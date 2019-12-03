@@ -62,13 +62,13 @@
 									<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 									<h2>{{ $productDetails->product_name }}</h2>
 									<h5>Code article: {{ $productDetails->product_code }}</h5>
-									<p>
+									<p><p>séléctionnez "promo" pour profiter de nos promotion</p>
 										<select id="selSize" name="size" style="width:150px;" required>
 											<option value="">Select</option>
 											@foreach($productDetails->attributes as $sizes)
 											<option value="{{ $productDetails->id }}-{{ $sizes->size }}">{{ $sizes->size }}</option>
 											@endforeach
-										</select>
+                                        </select>
 
 									</p>
 									<img src="images/product-details/rating.png" alt="" />
