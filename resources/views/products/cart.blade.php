@@ -85,8 +85,13 @@
 							<li>Totale <span> <?php echo $total_amount; ?> TND</span></li>
 						@endif
 					</ul>
+					@if($total_amount==0)
+							<div style="margin-left: 400px;"><a  class="btn btn-default check_out" href="{{ url('/') }}">Commencez-vos achats</a>
+				</div>
+@else
 					<div style="margin-left: 400px;"><a  class="btn btn-default check_out" href="{{ url('/checkout') }}">Continuer</a>
 				</div>
+				@endif
 			</div>
 		</div>
 	</div>
