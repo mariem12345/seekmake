@@ -26,7 +26,7 @@
             <h5>Edit Banner</h5>
           </div>
           <div class="widget-content nopadding">
-            <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ url('admin/edit-banner/'.$bannerDetails->id) }}" name="edit_banner" id="edit_banner" novalidate="novalidate">{{ csrf_field() }}
+            <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ url('seekmakeadminprivate/edit-banner/'.$bannerDetails->id) }}" name="edit_banner" id="edit_banner" novalidate="novalidate">{{ csrf_field() }}
               <div class="control-group">
                 <label class="control-label">Banner Image</label>
                 <div class="controls">

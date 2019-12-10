@@ -229,7 +229,7 @@ $(document).ready(function(){
           closeOnConfirm: false
         },
         function(){
-            window.location.href="/admin/"+deleteFunction+"/"+id;
+            window.location.href="/seekmakeadminprivate/"+deleteFunction+"/"+id;
         });
     });
 

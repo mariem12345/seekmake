@@ -12,7 +12,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Admin::updateOrCreate(['username'=>'admin', 'password' => md5('admin1234567')]);
+        \App\Admin::updateOrCreate(['username'=>'admin', 'password' => Hash::make('admin1234567')]);
 
     }
 }

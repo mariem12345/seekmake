@@ -12,7 +12,9 @@ body {
   position: relative;
   font-weight:400px;
 }
-
+#promo{
+  color:#f2a71e;
+}
 ul li {
   list-style: none;
 }

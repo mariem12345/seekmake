@@ -59,7 +59,7 @@
                   <td class="center">{{ $order->order_status }}</td>
                   <td class="center">{{ $order->payment_method }}</td>
                   <td class="center">
-                    <a target="_blank" href="{{ url('admin/view-order/'.$order->id)}}" class="btn btn-success btn-mini">View Order Details</a> 
+                    <a target="_blank" href="{{ url('seekmakeadminprivate/view-order/'.$order->id)}}" class="btn btn-success btn-mini">View Order Details</a> 
                   </td>
                 </tr>
                 @endforeach

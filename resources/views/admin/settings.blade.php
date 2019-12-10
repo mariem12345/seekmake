@@ -27,7 +27,7 @@
               <h5>Update Password</h5>
             </div>
             <div class="widget-content nopadding">
-              <form class="form-horizontal" method="post" action="{{ url('/admin/update-pwd') }}" name="password_validate" id="password_validate" novalidate="novalidate">{{ csrf_field() }}
+              <form class="form-horizontal" method="post" action="{{ url('/seekmakeadminprivate/update-pwd') }}" name="password_validate" id="password_validate" novalidate="novalidate">{{ csrf_field() }}
                 <div class="control-group">
                   <label class="control-label">Username</label>
                   <div class="controls">

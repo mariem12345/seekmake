@@ -45,8 +45,8 @@
                   <td class="center">{{ $category->parent_id }}</td>
                   <td class="center">{{ $category->url }}</td>
                   <td class="center">
-                    <a href="{{ url('/admin/edit-category/'.$category->id) }}" class="btn btn-primary btn-mini">Edit</a> 
-                    <a <?php /* id="delCat" href="{{ url('/admin/delete-category/'.$category->id) }}" */ ?> rel="{{ $category->id }}" rel1="delete-category" href="javascript:" class="btn btn-danger btn-mini deleteRecord">Delete</a></td>
+                    <a href="{{ url('/seekmakeadminprivate/edit-category/'.$category->id) }}" class="btn btn-primary btn-mini">Edit</a> 
+                    <a <?php /* id="delCat" href="{{ url('/seekmakeadminprivate/delete-category/'.$category->id) }}" */ ?> rel="{{ $category->id }}" rel1="delete-category" href="javascript:" class="btn btn-danger btn-mini deleteRecord">Delete</a></td>
                 </tr>
                 @endforeach
               </tbody>

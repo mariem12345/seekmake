@@ -49,8 +49,8 @@
                     @endif
                   </td>
                   <td class="center">
-                    <a href="{{ url('/admin/edit-banner/'.$banner->id) }}" class="btn btn-primary btn-mini">Edit</a> 
-                    <a id="delBanner" rel="{{ $banner->id }}" rel1="delete-banner" href="javascript:" <?php /* href="{{ url('/admin/delete-banner/'.$banner->id) }}" */ ?> class="btn btn-danger btn-mini deleteRecord">Delete</a>
+                    <a href="{{ url('/seekmakeadminprivate/edit-banner/'.$banner->id) }}" class="btn btn-primary btn-mini">Edit</a> 
+                    <a id="delBanner" rel="{{ $banner->id }}" rel1="delete-banner" href="javascript:" <?php /* href="{{ url('/seekmakeadminprivate/delete-banner/'.$banner->id) }}" */ ?> class="btn btn-danger btn-mini deleteRecord">Delete</a>
                   </td>
                 </tr>
                 @endforeach

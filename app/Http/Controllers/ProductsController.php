@@ -267,11 +267,11 @@ class ProductsController extends Controller
                 if(!empty($val)){
                     $attrCountSKU = ProductsAttribute::where(['sku'=>$val])->count();
                     if($attrCountSKU>0){
-                        return redirect('admin/add-attributes/'.$id)->with('flash_message_error', 'SKU already exists. Please add another SKU.');
+                        return redirect('seekmakeadminprivate/add-attributes/'.$id)->with('flash_message_error', 'SKU already exists. Please add another SKU.');
                     }
                     $attrCountSizes = ProductsAttribute::where(['product_id'=>$id,'size'=>$data['size'][$key]])->count();
                     if($attrCountSizes>0){
-                        return redirect('admin/add-attributes/'.$id)->with('flash_message_error', 'Attribute already exists. Please add another Attribute.');
+                        return redirect('seekmakeadminprivate/add-attributes/'.$id)->with('flash_message_error', 'Attribute already exists. Please add another Attribute.');
                     }
                     $attr = new ProductsAttribute;
                     $attr->product_id = $id;
@@ -282,7 +282,7 @@ class ProductsController extends Controller
                     $attr->save();
                 }
             }
-            return redirect('admin/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been added successfully');
+            return redirect('seekmakeadminprivate/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been added successfully');
 
         }
 
@@ -300,7 +300,7 @@ class ProductsController extends Controller
                     ProductsAttribute::where(['id' => $data['idAttr'][$key]])->update(['price' => $data['price'][$key], 'stock' => $data['stock'][$key]]);
                 }
             }
-            return redirect('admin/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been updated successfully');
+            return redirect('seekmakeadminprivate/add-attributes/'.$id)->with('flash_message_success', 'Product Attributes has been updated successfully');
         }
     }
 
@@ -331,7 +331,7 @@ class ProductsController extends Controller
                 }
             }
 
-            return redirect('admin/add-images/'.$id)->with('flash_message_success', 'Product Images has been added successfully');
+            return redirect('seekmakeadminprivate/add-images/'.$id)->with('flash_message_success', 'Product Images has been added successfully');
 
         }
 

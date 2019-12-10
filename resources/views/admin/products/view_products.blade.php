@@ -58,9 +58,9 @@
                   </td>
                   <td class="center">
                     <a href="#myModal{{ $product->id }}" data-toggle="modal" class="btn btn-success btn-mini">View</a> 
-                    <a href="{{ url('/admin/edit-product/'.$product->id) }}" class="btn btn-primary btn-mini">Edit</a> 
-                    <a href="{{ url('/admin/add-attributes/'.$product->id) }}" class="btn btn-success btn-mini">Add</a>
-                    <a href="{{ url('/admin/add-images/'.$product->id) }}" class="btn btn-info btn-mini">Add</a>
+                    <a href="{{ url('/seekmakeadminprivate/edit-product/'.$product->id) }}" class="btn btn-primary btn-mini">Edit</a> 
+                    <a href="{{ url('/seekmakeadminprivate/add-attributes/'.$product->id) }}" class="btn btn-success btn-mini">Add</a>
+                    <a href="{{ url('/seekmakeadminprivate/add-images/'.$product->id) }}" class="btn btn-info btn-mini">Add</a>
                     <a id="delProduct" rel="{{ $product->id }}" rel1="delete-product" href="javascript:" class="btn btn-danger btn-mini deleteRecord">Delete</a>
  
                         <div id="myModal{{ $product->id }}" class="modal hide">

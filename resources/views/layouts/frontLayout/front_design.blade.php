@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>SeekMake | Acceuil</title>
+    <title>SeekShop | Acceuil</title>
     <link href="{{ asset('css/frontend_css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/frontend_css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/frontend_css/prettyPhoto.css') }}" rel="stylesheet">

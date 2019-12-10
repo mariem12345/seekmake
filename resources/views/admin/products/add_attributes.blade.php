@@ -26,7 +26,7 @@
             <h5>Add Attributes</h5>
           </div>
           <div class="widget-content nopadding">
-            <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ url('admin/add-attributes/'.$productDetails->id) }}" name="add_product" id="add_product" novalidate="novalidate">{{ csrf_field() }}
+            <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ url('seekmakeadminprivate/add-attributes/'.$productDetails->id) }}" name="add_product" id="add_product" novalidate="novalidate">{{ csrf_field() }}
               <input type="hidden" name="product_id" value="{{ $productDetails->id }}">
               <div class="control-group">
                 <label class="control-label">Category Name</label>
@@ -70,7 +70,7 @@
             <h5>Attributes</h5>
           </div>
           <div class="widget-content nopadding">
-            <form action="{{ url('admin/edit-attributes/'.$productDetails->id) }}" method="post">{{ csrf_field() }}
+            <form action="{{ url('seekmakeadminprivate/edit-attributes/'.$productDetails->id) }}" method="post">{{ csrf_field() }}
               <table class="table table-bordered data-table">
                 <thead>
                   <tr>

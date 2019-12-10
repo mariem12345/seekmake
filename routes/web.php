@@ -17,11 +17,11 @@ Route::get('/', function () {
 
 Route::get('/','IndexController@index');
 
-Route::match(['get', 'post'], '/admin','AdminController@login');
+Route::match(['get', 'post'], '/seekmakeadminprivate','AdminController@login');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'IndexController@index')->name('home');
 
 // Category/Listing Page
 Route::get('/products/{url}','ProductsController@products');
@@ -45,7 +45,7 @@ Route::get('/cart/update-quantity/{id}/{quantity}','ProductsController@updateCar
 Route::any('/get-product-price','ProductsController@getProductPrice');
 
 // Apply Coupon
-Route::post('/cart/apply-coupon','ProductsController@applyCoupon');
+//Route::post('/cart/apply-coupon','ProductsController@applyCoupon');
 
 // Users Login/Register Page
 Route::get('/login-register','UsersController@userLoginRegister');
@@ -64,15 +64,17 @@ Route::get('/user-logout','UsersController@logout');
 
 // Search Products
 Route::post('/search-products','ProductsController@searchProducts');
+Route::get('/search-products','ProductsController@searchProducts');
 
 // All Routes after Login
 Route::group(['middleware'=>['frontlogin']],function(){
 	// Users Account Page
 	Route::match(['get','post'],'account','UsersController@account');
 	// Check User Current Password
-	Route::post('/check-user-pwd','UsersController@chkUserPassword');
+	Route::get('/check-user-pwd','UsersController@chkUserPassword');
 	// Update User Password
 	Route::post('/update-user-pwd','UsersController@updatePassword');
+
 	// Checkout Page
 	Route::match(['get','post'],'checkout','ProductsController@checkout');
 	// Order Review Page
@@ -82,71 +84,71 @@ Route::group(['middleware'=>['frontlogin']],function(){
 	// Thanks Page
 	Route::get('/thanks','ProductsController@thanks');
 	// Paypal Page
-	Route::get('/paypal','ProductsController@paypal');
+	//Route::get('/paypal','ProductsController@paypal');
 	// Users Orders Page
 	Route::get('/orders','ProductsController@userOrders');
 	// User Ordered Products Page
 	Route::get('/orders/{id}','ProductsController@userOrderDetails');
 	// Paypal Thanks Page
-	Route::get('/paypal/thanks','ProductsController@thanksPaypal');
+	//Route::get('/paypal/thanks','ProductsController@thanksPaypal');
 	// Paypal Cancel Page
-	Route::get('/paypal/cancel','ProductsController@cancelPaypal');
+	//Route::get('/paypal/cancel','ProductsController@cancelPaypal');
 });
 
 
 // Check if User already exists
-Route::match(['GET','POST'],'/check-email','UsersController@checkEmail');
+//Route::match(['GET','POST'],'/check-email','UsersController@checkEmail');
 
 Route::group(['middleware' => ['adminlogin']], function () {
-	Route::get('/admin/dashboard','AdminController@dashboard');	
-	Route::get('/admin/settings','AdminController@settings');
-	Route::get('/admin/check-pwd','AdminController@chkPassword');
-	Route::match(['get', 'post'],'/admin/update-pwd','AdminController@updatePassword');
+	Route::get('/seekmakeadminprivate/dashboard','AdminController@dashboard');	
+	Route::get('/seekmakeadminprivate/settings','AdminController@settings');
+	Route::get('/seekmakeadminprivate/check-pwd','AdminController@chkPassword');
+	Route::match(['get', 'post'],'/seekmakeadminprivate/update-pwd','AdminController@updatePassword');
 
 	// Admin Categories Routes
-	Route::match(['get', 'post'], '/admin/add-category','CategoryController@addCategory');
-	Route::match(['get', 'post'], '/admin/edit-category/{id}','CategoryController@editCategory');
-	Route::match(['get', 'post'], '/admin/delete-category/{id}','CategoryController@deleteCategory');
-	Route::get('/admin/view-categories','CategoryController@viewCategories');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/add-category','CategoryController@addCategory');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/edit-category/{id}','CategoryController@editCategory');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/delete-category/{id}','CategoryController@deleteCategory');
+	Route::get('/seekmakeadminprivate/view-categories','CategoryController@viewCategories');
 
 	// Admin Products Routes
-	Route::match(['get','post'],'/admin/add-product','ProductsController@addProduct');
-	Route::match(['get','post'],'/admin/edit-product/{id}','ProductsController@editProduct');
-	Route::get('/admin/delete-product/{id}','ProductsController@deleteProduct');
-	Route::get('/admin/view-products','ProductsController@viewProducts');
-	Route::get('/admin/delete-product-image/{id}','ProductsController@deleteProductImage');
+	Route::match(['get','post'],'/seekmakeadminprivate/add-product','ProductsController@addProduct');
+	Route::match(['get','post'],'/seekmakeadminprivate/edit-product/{id}','ProductsController@editProduct');
+	Route::get('/seekmakeadminprivate/delete-product/{id}','ProductsController@deleteProduct');
+	Route::get('/seekmakeadminprivate/view-products','ProductsController@viewProducts');
+	Route::get('/seekmakeadminprivate/delete-product-image/{id}','ProductsController@deleteProductImage');
 	
-	Route::match(['get', 'post'], '/admin/add-images/{id}','ProductsController@addImages');
-	Route::get('/admin/delete-alt-image/{id}','ProductsController@deleteProductAltImage');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/add-images/{id}','ProductsController@addImages');
+	Route::get('/seekmakeadminprivate/delete-alt-image/{id}','ProductsController@deleteProductAltImage');
 
 	// Admin Attributes Routes
-	Route::match(['get', 'post'], '/admin/add-attributes/{id}','ProductsController@addAttributes');
-	Route::match(['get', 'post'], '/admin/edit-attributes/{id}','ProductsController@editAttributes');
-	Route::get('/admin/delete-attribute/{id}','ProductsController@deleteAttribute');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/add-attributes/{id}','ProductsController@addAttributes');
+	Route::match(['get', 'post'], '/seekmakeadminprivate/edit-attributes/{id}','ProductsController@editAttributes');
+	Route::get('/seekmakeadminprivate/delete-attribute/{id}','ProductsController@deleteAttribute');
 
 	// Admin Coupon Routes
-	Route::match(['get','post'],'/admin/add-coupon','CouponsController@addCoupon');
-	Route::match(['get','post'],'/admin/edit-coupon/{id}','CouponsController@editCoupon');
-	Route::get('/admin/view-coupons','CouponsController@viewCoupons');
-	Route::get('/admin/delete-coupon/{id}','CouponsController@deleteCoupon');
+	//Route::match(['get','post'],'/admin/add-coupon','CouponsController@addCoupon');
+	//Route::match(['get','post'],'/admin/edit-coupon/{id}','CouponsController@editCoupon');
+	//Route::get('/admin/view-coupons','CouponsController@viewCoupons');
+	//Route::get('/admin/delete-coupon/{id}','CouponsController@deleteCoupon');
 
 	// Admin Banners Routes
-	Route::match(['get','post'],'/admin/add-banner','BannersController@addBanner');
-	Route::match(['get','post'],'/admin/edit-banner/{id}','BannersController@editBanner');
-	Route::get('admin/view-banners','BannersController@viewBanners');
-	Route::get('/admin/delete-banner/{id}','BannersController@deleteBanner');
+	Route::match(['get','post'],'/seekmakeadminprivate/add-banner','BannersController@addBanner');
+	Route::match(['get','post'],'/seekmakeadminprivate/edit-banner/{id}','BannersController@editBanner');
+	Route::get('seekmakeadminprivate/view-banners','BannersController@viewBanners');
+	Route::get('/seekmakeadminprivate/delete-banner/{id}','BannersController@deleteBanner');
 
 	// Admin Orders Routes
-	Route::get('/admin/view-orders','ProductsController@viewOrders');
+	Route::get('/seekmakeadminprivate/view-orders','ProductsController@viewOrders');
 
 	// Admin Order Details Route
-	Route::get('/admin/view-order/{id}','ProductsController@viewOrderDetails');
+	Route::get('/seekmakeadminprivate/view-order/{id}','ProductsController@viewOrderDetails');
 
 	// Update Order Status
-	Route::post('/admin/update-order-status','ProductsController@updateOrderStatus');
+	Route::post('/seekmakeadminprivate/update-order-status','ProductsController@updateOrderStatus');
 
 	// Admin Users Route
-	Route::get('/admin/view-users','UsersController@viewUsers');
+	Route::get('/seekmakeadminprivate/view-users','UsersController@viewUsers');
 });
 
 
@@ -157,4 +159,3 @@ Route::get('/logout','AdminController@logout');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

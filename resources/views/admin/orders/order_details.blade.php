@@ -105,7 +105,7 @@
             </div>
             <div class="collapse in accordion-body" id="collapseGOne">
               <div class="widget-content"> 
-                <form action="{{ url('admin/update-order-status') }}" method="post">{{ csrf_field() }}
+                <form action="{{ url('seekmakeadminprivate/update-order-status') }}" method="post">{{ csrf_field() }}
                   <input type="hidden" name="order_id" value="{{ $orderDetails->id }}">
                   <table width="100%">
                     <tr>
