@@ -11,7 +11,7 @@
 		</div>
 		@if(Session::has('flash_message_error'))
             <div class="alert alert-error alert-block" style="background-color:#f4d2d2">
-                <button type="button" class="close" data-dismiss="alert">×</button> 
+                <button type="button" class="close" data-dismiss="alert">×</button>
                     <strong>{!! session('flash_message_error') !!}</strong>
             </div>
 		@endif
@@ -26,13 +26,13 @@
 							<div class="form-group">
 								<input name="billing_address" id="billing_address" @if(!empty($userDetails->address)) value="{{ $userDetails->address }}" @endif type="text" placeholder="Adresse" class="form-control" />
 							</div>
-							<div class="form-group">	
+							<div class="form-group">
 								<input name="billing_city" id="billing_city" @if(!empty($userDetails->city)) value="{{ $userDetails->city }}" @endif type="text" placeholder="Région" class="form-control" />
 							</div>
 							<div class="form-group">
 								<input name="billing_state" id="billing_state" @if(!empty($userDetails->state)) value="{{ $userDetails->state }}" @endif type="text" placeholder="Ville" class="form-control" />
 							</div>
-							
+
 							<div class="form-group">
 								<input name="billing_pincode" id="billing_pincode" @if(!empty($userDetails->name)) value="{{ $userDetails->pincode }}" @endif type="text" placeholder="Code postale" class="form-control" />
 							</div>
@@ -50,20 +50,20 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
-						<h2>Adresse de livraion</h2>
+						<h2>Adresse de livraison</h2>
 							<div class="form-group">
 								<input name="shipping_name" id="shipping_name" @if(!empty($shippingDetails->name)) value="{{ $shippingDetails->name }}" @endif type="text" placeholder="Nom et Prénom" class="form-control" />
 							</div>
 							<div class="form-group">
 								<input name="shipping_address" id="shipping_address" @if(!empty($shippingDetails->address)) value="{{ $shippingDetails->address }}" @endif type="text" placeholder="Adresse" class="form-control" />
 							</div>
-							<div class="form-group">	
+							<div class="form-group">
 								<input name="shipping_city" id="shipping_city" @if(!empty($shippingDetails->city)) value="{{ $shippingDetails->city }}" @endif type="text" placeholder="Région" class="form-control" />
 							</div>
 							<div class="form-group">
 								<input name="shipping_state" id="shipping_state" @if(!empty($shippingDetails->state)) value="{{ $shippingDetails->state }}" @endif type="text" placeholder="Ville" class="form-control" />
 							</div>
-							
+
 							<div class="form-group">
 								<input name="shipping_pincode" id="shipping_pincode" @if(!empty($shippingDetails->pincode)) value="{{ $shippingDetails->pincode }}" @endif type="text" placeholder="Code postale" class="form-control" />
 							</div>

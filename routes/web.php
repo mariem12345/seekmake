@@ -60,7 +60,7 @@ Route::get('confirm/{code}','UsersController@confirmAccount');
 Route::post('user-login','UsersController@login');
 
 // Users logout
-Route::get('/user-logout','UsersController@logout'); 
+Route::get('/user-logout','UsersController@logout');
 
 // Search Products
 Route::post('/search-products','ProductsController@searchProducts');
@@ -97,10 +97,10 @@ Route::group(['middleware'=>['frontlogin']],function(){
 
 
 // Check if User already exists
-//Route::match(['GET','POST'],'/check-email','UsersController@checkEmail');
+Route::match(['GET','POST'],'/check-email','UsersController@checkEmail');
 
 Route::group(['middleware' => ['adminlogin']], function () {
-	Route::get('/seekmakeadminprivate/dashboard','AdminController@dashboard');	
+	Route::get('/seekmakeadminprivate/dashboard','AdminController@dashboard');
 	Route::get('/seekmakeadminprivate/settings','AdminController@settings');
 	Route::get('/seekmakeadminprivate/check-pwd','AdminController@chkPassword');
 	Route::match(['get', 'post'],'/seekmakeadminprivate/update-pwd','AdminController@updatePassword');
@@ -117,7 +117,7 @@ Route::group(['middleware' => ['adminlogin']], function () {
 	Route::get('/seekmakeadminprivate/delete-product/{id}','ProductsController@deleteProduct');
 	Route::get('/seekmakeadminprivate/view-products','ProductsController@viewProducts');
 	Route::get('/seekmakeadminprivate/delete-product-image/{id}','ProductsController@deleteProductImage');
-	
+
 	Route::match(['get', 'post'], '/seekmakeadminprivate/add-images/{id}','ProductsController@addImages');
 	Route::get('/seekmakeadminprivate/delete-alt-image/{id}','ProductsController@deleteProductAltImage');
 
@@ -159,3 +159,4 @@ Route::get('/logout','AdminController@logout');
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
