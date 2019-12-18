@@ -24,7 +24,7 @@
 						<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
 							<h2>NOUVEAU SUR SeekMake ?</h2>
-							<form action="#" class="searchform">
+							<form action="#" class="searchform"> @csrf
 								<input type="text" placeholder="Votre adresse email" />
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
 								<p>Inscrivez-vous à nos communications pour recevoir nos meilleures offres!</p>

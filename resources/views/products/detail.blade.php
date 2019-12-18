@@ -62,7 +62,7 @@
 									<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 									<h2>{{ $productDetails->product_name }}</h2>
 									<h5>Code article: {{ $productDetails->product_code }}</h5>
-									<p><p id="promo">Séléctionnez "promo" pour profiter de nos promotions</p>
+									<p><p id="promo">choisissez les dimensions qui vous conviennent</p>
 										<select id="selSize" name="size" style="width:150px;" required>
 											<option value="">Select</option>
 											@foreach($productDetails->attributes as $sizes)

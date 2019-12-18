@@ -30,7 +30,7 @@
 					</div>
 
 				</div>
-				
+
 
 </section><!--/slider-->
 
@@ -51,11 +51,10 @@
 										<div class="productinfo text-center">
 											<a href="{{ url('/product/'.$pro->id) }}" ><img src="{{ asset('/images/backend_images/product/small/'.$pro->image) }}" alt="" />
                                             <p><b> {{ $pro->product_name }} </b></p>
-                                            <p class="disc">-50%</p>
-                                            <h2>{{ $pro->price/2 }}TND</h2>
-                                            <h5><strike> {{ $pro->price }}TND </strike></h5></a>
+                                            <h2>{{ $pro->price }}TND</h2>
 
-											
+
+
 										</div>
 
 								</div>
